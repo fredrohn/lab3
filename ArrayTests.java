@@ -9,10 +9,25 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
 
+  @Test
+  public void testReverseInPlaceAgain(){
+    int[] input = {1,2,3,4,5,6};
+    int[] toCheck = {6,5,4,3,2,1};
+    ArrayExamples.reverseInPlaceFixed(input);
+    assertArrayEquals(toCheck, input);
+  }
+
 
   @Test
   public void testReversed() {
     int[] input1 = { };
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
+
+  @Test
+  public void testReversedAgain(){
+    int[] input = {1,2,3,4,5,6};
+    int[] toCheck = {6,5,4,3,2,1};
+    assertArrayEquals(toCheck, ArrayExamples.reversedFixed(input));
   }
 }

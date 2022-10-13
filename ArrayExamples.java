@@ -9,14 +9,36 @@ public class ArrayExamples {
     }
   }
 
+  static void reverseInPlaceFixed(int[] arr) {
+    int[] reversedArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      reversedArray[i] = arr[arr.length - 1 - i];
+    }
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = reversedArray[i];
+    }
+  }
+
+
+
   // Returns a *new* array with all the elements of the input array in reversed
   // order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = newArray[arr.length - i - 1];
+      //doesn't fill the new array, it's always 0
     }
     return arr;
+    //doens't return the new array
+  }
+
+  static int[] reversedFixed(int[] arr){
+    int[] reversedArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      reversedArray[i] = arr[arr.length - 1 - i];
+    }
+    return reversedArray;
   }
 
   // Averages the numbers in the array (takes the mean), but leaves out the
