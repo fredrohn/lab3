@@ -30,4 +30,11 @@ public class ArrayTests {
     int[] toCheck = {6,5,4,3,2,1};
     assertArrayEquals(toCheck, ArrayExamples.reversedFixed(input));
   }
+
+  @Test
+  public void testAverageWithoutLowest(){
+    double[] input = {2,2,2,2};
+    double toCheck = 2.0;
+    assertEquals(toCheck, ArrayExamples.averageWithoutLowestFixed(input), 0.01);
+  }
 }
